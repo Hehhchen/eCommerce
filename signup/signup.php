@@ -1,5 +1,5 @@
 <?php
-    $db_connection = pg_connect("host=ec2-174-129-41-127.compute-1.amazonaws.com dbname=dm2oitjf83u73 user=tjzntcroxpnjme password=f26ae870fba99aa4ec86ad28f5b4e2df70de121c81324e818122615da4dcb59a");
+    $db_connection = pg_connect("host=ec2-54-83-55-125.compute-1.amazonaws.com dbname=d3h17gvrd6hlhs user=kpccbqhujjcixk password=c732048928370d49a64e4be8718393111f3a0508e07ca095eda8e7a3ade16110");
     //echo "<script>alert('username taken');window.location.href='index.html'</script>";
 
 
@@ -19,7 +19,7 @@
     }else if(pg_fetch_array(pg_query($db_connection,"select * from Users where email = '$email'"))){
         echo "<script>alert('email taken');window.location.href='index.html'</script>";
     } else{
-        $sqlinsert="insert into Users(Full_Name,Email,Username,Password,Address,City,State,Zip) values('{$fullname}','{$email}','{$username}','{$hashpass}','{$address}','{$city}','{$state}','{$zip}')";
+        $sqlinsert="insert into Users(address, city, email, name, pass, state, username, zip) values('{$address}','{$city}','{$email}','{$fullname}','{$hashpass}','{$state}','{$username}','{$zip}')";
 
         if(!(pg_query($sqlinsert))){
             echo "<script>alert('failed');window.location.href='index.html'</script>";
