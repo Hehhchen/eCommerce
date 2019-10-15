@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD
     $db_connection = pg_connect("host=ec2-54-83-55-125.compute-1.amazonaws.com dbname=d3h17gvrd6hlhs user=kpccbqhujjcixk password=c732048928370d49a64e4be8718393111f3a0508e07ca095eda8e7a3ade16110");
+=======
+    $db_connection = parse_url(getenv("DATABASE_URL"));
+>>>>>>> parent of 8aeebfb... changed signup
 
 
     $fullname = $_POST['name'];
