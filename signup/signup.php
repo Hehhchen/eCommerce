@@ -1,5 +1,5 @@
 <?php
-    $db_connection = parse_url(getenv("DATABASE_URL"));
+    $db_connection = pg_connect("host=localhost dbname=postgresql-clean-91968 user=rp2zd@virginia.edu password=R@gnar0k98");
 
 
     $fullname = $_POST['name'];
