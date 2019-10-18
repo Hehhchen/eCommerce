@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login V3</title>
+	<title>Contact V16</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
@@ -12,6 +12,8 @@
 	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
 <!--===============================================================================================-->
@@ -26,21 +28,16 @@
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
-<!-- Compiled and minified CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-<!-- Compiled and minified JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
 </head>
 <body>
+
 	<!-- Start Header Area -->
 	<header class="header_area sticky-header">
 		<div class="main_menu">
 			<nav class="navbar navbar-expand-lg navbar-light main_box">
 				<div class="container">
 					<!-- Brand and toggle get grouped for better mobile display -->
-					<a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a>
+					<a class="navbar-brand logo_h" href="../index.html"><img src="../img/logo.png" alt=""></a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="icon-bar"></span>
@@ -70,7 +67,7 @@
 									<li class="nav-item"><a class="nav-link" href="../Login/index.html">Login</a></li>
 								</ul>
 							</li>
-							<li class="nav-item"><a class="nav-link" href="../assets2/Contact.html">Contact</a></li>
+							<li class="nav-item"><a class="nav-link" href="">Contact</a></li>
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
 							<li class="nav-item"><a href="#" class="cart"><span class="ti-bag"></span></a></li>
@@ -84,63 +81,71 @@
 		</div>
 		<div class="search_input" id="search_input_box">
 			<div class="container">
-				<form class="d-flex justify-content-between">
-					<input type="text" class="form-control" id="search_input" placeholder="Search Here">
-					<button type="submit" class="btn"></button>
-					<span class="lnr lnr-cross" id="close_search" title="Close Search"></span>
-				</form>
 			</div>
 		</div>
 	</header>
 	<!-- End Header Area -->
 
-	<div class="limiter">
-		<div class="container-login100" style="background-image: url('https://cdn.suwalls.com/wallpapers/photography/skateboard-29638-400x250.jpg');">
-			<div class="wrap-login100">
-				<form class="login100-form validate-form">
-					<span class="login100-form-logo" style="background-image:../logo.jpg">
-						<img src=../logo.jpg height = "150" width = "150" style="border-radius:100%">
-					</span>
+	<div class="bg-container-contact100" style="background-image: url("https://brailleskateboarding.com/wp-content/uploads/2019/03/KICKFLIP.jpg");>
+		<div class="contact100-header flex-sb-m">
 
-					<span class="login100-form-title p-b-34 p-t-27">
-						Log in
-					</span>
 
-					<div class="wrap-input100 validate-input" data-validate = "Enter username">
-						<input class="input100" type="text" name="username" placeholder="       Username">
-						<span class="focus-input100" data-placeholder="&#xf207;"></span>
-					</div>
+		</div>
+	</div>
 
-					<div class="wrap-input100 validate-input" data-validate="Enter password">
-						<input class="input100" type="password" name="pass" placeholder="       Password">
-						<span class="focus-input100" data-placeholder="&#xf191;"></span>
-					</div>
+	<div class="container-contact100">
+		<div class="wrap-contact100">
 
-					<div class="contact100-form-checkbox">
-						<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
-						<label class="label-checkbox100" for="ckb1">
-							Remember me
-						</label>
-					</div>
-
-					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
-							Login
-						</button>
-					</div>
-
-					<div class="text-center p-t-90">
-						<a class="txt1" href="#">
-							Forgot Password?
-						</a>
-					</div>
-				</form>
+			<div class="contact100-form-title" style="background-image: "https://www.bamargera.com/wp-content/uploads/2019/03/Top-15-Best-Electric-Skateboards-In-2019-692x376.jpg";">
+				<span>Contact Us</span>
 			</div>
+
+			<form class="contact100-form validate-form">
+				<div class="wrap-input100 validate-input">
+					<input id="name" class="input100" type="text" name="name" placeholder="Full name">
+					<span class="focus-input100"></span>
+					<label class="label-input100" for="name">
+						<span class="lnr lnr-user m-b-2"></span>
+					</label>
+				</div>
+
+
+				<div class="wrap-input100 validate-input">
+					<input id="email" class="input100" type="text" name="email" placeholder="Eg. example@email.com">
+					<span class="focus-input100"></span>
+					<label class="label-input100" for="email">
+						<span class="lnr lnr-envelope m-b-5"></span>
+					</label>
+				</div>
+
+
+				<div class="wrap-input100 validate-input">
+					<input id="phone" class="input100" type="text" name="phone" placeholder="Eg. +1 800 000000">
+					<span class="focus-input100"></span>
+					<label class="label-input100" for="phone">
+						<span class="lnr lnr-smartphone m-b-2"></span>
+					</label>
+				</div>
+
+
+				<div class="wrap-input100 validate-input">
+					<textarea id="message" class="input100" name="message" placeholder="Your comments..."></textarea>
+					<span class="focus-input100"></span>
+					<label class="label-input100 rs1" for="message">
+						<span class="lnr lnr-bubble"></span>
+					</label>
+				</div>
+
+				<div class="container-contact100-form-btn">
+					<button class="contact100-form-btn">
+						Send Now
+					</button>
+				</div>
+			</form>
 		</div>
 	</div>
 
 
-	<div id="dropDownSelect1"></div>
 
 <!--===============================================================================================-->
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
@@ -158,6 +163,14 @@
 	<script src="vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
 
+	  gtag('config', 'UA-23581568-13');
+	</script>
 </body>
 </html>
