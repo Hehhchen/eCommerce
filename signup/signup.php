@@ -3,9 +3,9 @@
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
     use PHPMailer\PHPMailer\SMTP;
-    require 'src/Exception.php';
-    require 'src/PHPMailer.php';
-    require 'src/SMTP.php';
+    require '../src/Exception.php';
+    require '../src/PHPMailer.php';
+    require '../src/SMTP.php';
     $db_connection = pg_connect("host=ec2-54-83-55-125.compute-1.amazonaws.com dbname=d3h17gvrd6hlhs user=kpccbqhujjcixk password=c732048928370d49a64e4be8718393111f3a0508e07ca095eda8e7a3ade16110");
 
     $fullname = $_POST['name'];
@@ -28,12 +28,12 @@
         $sqlinsert="insert into Users(address, city, email, name, pass, state, username, zip) values('{$address}','{$city}','{$email}','{$fullname}','{$hashpass}','{$state}','{$username}','{$zip}')";
         try{
             $mail->IsSMTP();
-            $mail->IsSMTP(); // enable SMTP
-            $mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
-            $mail->SMTPAuth = true; // authentication enabled
-            $mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
+            $mail->IsSMTP(); 
+            $mail->SMTPDebug = 1;
+            $mail->SMTPAuth = true; 
+            $mail->SMTPSecure = 'ssl'; 
             $mail->Host = "smtp.gmail.com";
-            $mail->Port = 587; // or 587
+            $mail->Port = 587; 
             $mail->IsHTML(true);
             $mail->Username = "boardhubzz@gmail.com";
             $mail->Password = "boardhub478";
