@@ -1,11 +1,6 @@
 <?php
 
-    use PHPMailer\PHPMailer\PHPMailer;
-    use PHPMailer\PHPMailer\Exception;
-    use PHPMailer\PHPMailer\SMTP;
-    require '../src/Exception.php';
-    require '../src/PHPMailer.php';
-    require '../src/SMTP.php';
+   
     $db_connection = pg_connect("host=ec2-54-83-55-125.compute-1.amazonaws.com dbname=d3h17gvrd6hlhs user=kpccbqhujjcixk password=c732048928370d49a64e4be8718393111f3a0508e07ca095eda8e7a3ade16110");
 
     $fullname = $_POST['name'];
@@ -18,7 +13,6 @@
     $state = $_POST['state'];
     $zip = $_POST['zip'];
 
-    $mail=new PHPMailer(true);
 
     if(pg_fetch_array(pg_query($db_connection,"SELECT * FROM Users where username = '$username'"))){
         echo "<script>alert('username taken');window.location.href='index.html'</script>";
@@ -26,28 +20,7 @@
         echo "<script>alert('email taken');window.location.href='index.html'</script>";
     } else{
         $sqlinsert="insert into Users(address, city, email, name, pass, state, username, zip) values('{$address}','{$city}','{$email}','{$fullname}','{$hashpass}','{$state}','{$username}','{$zip}')";
-        try{
-            $mail->IsSMTP();
-            $mail->IsSMTP(); 
-            $mail->SMTPDebug = 1;
-            $mail->SMTPAuth = true; 
-            $mail->SMTPSecure = 'ssl'; 
-            $mail->Host = "smtp.gmail.com";
-            $mail->Port = 587; 
-            $mail->IsHTML(true);
-            $mail->Username = "boardhubzz@gmail.com";
-            $mail->Password = "boardhub478";
-
-            $mail->SetFrom("boardhubzz@gmail.com");
-            $mail->Subject = "Account Creation";
-            $mail->Body = "Hello Your Account to BoardHub! has been Created!";
-            $mail->AddAddress($email);
-            $mail->Send();
-            #echo "Message has been sent!";
-        }
-        catch(Exception e){
-            echo "Mail Error: " . $mail->ErrorInfo;
-        }
+        
         if(!(pg_query($sqlinsert))){
             echo "<script>alert('failed');window.location.href='index.html'</script>";
         }else{
